@@ -16,12 +16,12 @@ const skills=[
  ["Systems & networking",I.server,["Windows","Linux","TCP/IP","DNS","DHCP","Troubleshooting"]]
 ];
 const projects=[
- {t:"Smart Side-Collision Prevention System",tech:["ESP32","Ultrasonic sensors"],d:["Academic project focused on motorcycle rider safety.","Designed to detect nearby vehicles and support collision alerts.","Worked on hardware integration, sensor reliability and response testing."],gh:null,live:null},
+ {t:"Smart Side-Collision Prevention System",tech:["ESP32","Ultrasonic sensors"],d:["Academic project focused on motorcycle rider safety.","Designed to detect nearby vehicles and support collision alerts.","Worked on hardware integration, sensor reliability and response testing."],gh:"https://www.linkedin.com/in/mdkarimulla/details/projects/",buttonLabel:"LinkedIn",live:null},
  {t:"Currency Converter Web Application",tech:["React","JavaScript","Frankfurter API"],d:["Developed a React currency converter using live exchange rates.","Implemented currency selection, conversion, loading and error handling.","Practised responsive UI development and deployment workflows."],gh:"https://mdkarim1102.github.io/React-Deploy/",live:null}
 ];
 $("#skillGrid").innerHTML=skills.map(s=>`<article class="card sk tilt">${icon(s[1])}<h3>${s[0]}</h3><ul class="tags">${s[2].map(x=>`<li>${x}</li>`).join("")}</ul></article>`).join("");
 const btn=(u,l)=>u?`<a class="btn" href="${u}" target="_blank" rel="noopener">${l}</a>`:`<a class="btn" aria-disabled="true" tabindex="-1">${l}</a>`;
-$("#projGrid").innerHTML=projects.map(p=>`<article class="card pj tilt"><h3>${p.t}</h3><ul class="tags">${p.tech.map(x=>`<li>${x}</li>`).join("")}</ul><ul>${p.d.map(x=>`<li>${x}</li>`).join("")}</ul><div class="acts">${btn(p.gh,"GitHub")}${p.live?btn(p.live,"Live demo"):""}</div></article>`).join("");
+$("#projGrid").innerHTML=projects.map(p=>`<article class="card pj tilt"><h3>${p.t}</h3><ul class="tags">${p.tech.map(x=>`<li>${x}</li>`).join("")}</ul><ul>${p.d.map(x=>`<li>${x}</li>`).join("")}</ul><div class="acts">${btn(p.gh,p.buttonLabel||"GitHub")}${p.live?btn(p.live,"Live demo"):""}</div></article>`).join("");
 
 /* ---------- nav ---------- */
 const burger=$("#burger"),links=$("#links"),nav=$("nav");

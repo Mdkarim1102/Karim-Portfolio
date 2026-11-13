@@ -83,6 +83,8 @@ nav .brand{color:var(--ink);font-weight:600;padding:6px 12px;text-decoration:non
 .pj .btn{font-size:14px;padding:4px 14px;min-height:44px}
 .pj .btn[aria-disabled=true]{opacity:.5;pointer-events:none}
 .note{font-size:14px;color:var(--muted);margin-top:18px}
+.cert-card{max-width:760px;padding:24px;display:grid;gap:12px}
+.cert-card .when{color:var(--muted);font-size:15px}
 /* timeline */
 .tl{position:relative;padding-left:36px;max-width:760px}
 .tl::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:1px;background:var(--border)}
